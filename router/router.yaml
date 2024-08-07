@@ -11,6 +11,15 @@ sandbox:
 homepage:
   enabled: false
 
+telemetry:
+  apollo:
+    # Send all traces via OTLP
+    experimental_otlp_tracing_sampler: always_on
+
+  exporters:
+    tracing:
+      common:
+        sampler: 1.0
 cors:
   origins:
     - https://studio.apollographql.com
