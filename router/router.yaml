@@ -14,7 +14,9 @@ preview_entity_cache:
     urls: ["redis://verysecret@34.75.85.172:6379?db=0"]
     timeout: 5ms # Optional, by default: 2ms
     ttl: 24h # Optional, by default no expiration
-
+  subgraph:
+    all:
+      enabled: true
 
 # For demo purposes - can remove or enable homepage
 sandbox:
