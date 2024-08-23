@@ -5,6 +5,17 @@ supergraph:
   listen: 0.0.0.0:${env.PORT:-4000}
   introspection: true
 
+# Enable entity caching globally
+preview_entity_cache:
+  enabled: true
+
+  # Configure Redis
+  redis:
+    urls: ["redis://verysecret@34.75.85.172:6379?db=0"]
+    timeout: 5ms # Optional, by default: 2ms
+    ttl: 24h # Optional, by default no expiration
+
+
 # For demo purposes - can remove or enable homepage
 sandbox:
   enabled: true
